@@ -1,0 +1,22 @@
+{
+  "id": "happy-birthday",
+  "title": "Happy Birthday (opening)",
+  "description": "First phrase in C major. Great for timing practice.",
+  "bpm": 80,
+  "difficulty": "easy",
+  "lengthBeats": 10,
+  "events": [
+    { "t": 0, "midi": 60, "duration": 0.5, "sargam": "Sa", "western": "C4" },
+    { "t": 0.5, "midi": 60, "duration": 0.25, "sargam": "Sa", "western": "C4" },
+    { "t": 0.75, "midi": 62, "duration": 0.75, "sargam": "Re", "western": "D4" },
+    { "t": 1.5, "midi": 60, "duration": 0.75, "sargam": "Sa", "western": "C4" },
+    { "t": 2.25, "midi": 65, "duration": 0.75, "sargam": "Ma", "western": "F4" },
+    { "t": 3, "midi": 64, "duration": 1.5, "sargam": "Ga", "western": "E4" },
+    { "t": 4.5, "midi": 60, "duration": 0.5, "sargam": "Sa", "western": "C4" },
+    { "t": 5, "midi": 60, "duration": 0.25, "sargam": "Sa", "western": "C4" },
+    { "t": 5.25, "midi": 62, "duration": 0.75, "sargam": "Re", "western": "D4" },
+    { "t": 6, "midi": 60, "duration": 0.75, "sargam": "Sa", "western": "C4" },
+    { "t": 6.75, "midi": 67, "duration": 0.75, "sargam": "Pa", "western": "G4" },
+    { "t": 7.5, "midi": 65, "duration": 1.5, "sargam": "Ma", "western": "F4" }
+  ]
+}
