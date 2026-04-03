@@ -1,0 +1,297 @@
+{
+  "id": "raga-shivaranjani-drift",
+  "title": "Shivaranjani — drift loop",
+  "description": "Gentle arcs in a warm register; unhurried.",
+  "bpm": 38,
+  "difficulty": "easy",
+  "lengthBeats": 299.25,
+  "events": [
+    {
+      "t": 0,
+      "midi": 60,
+      "duration": 7,
+      "sargam": "Sa",
+      "western": "C4"
+    },
+    {
+      "t": 8.5,
+      "midi": 62,
+      "duration": 5,
+      "sargam": "Re",
+      "western": "D4"
+    },
+    {
+      "t": 14.5,
+      "midi": 63,
+      "duration": 5,
+      "sargam": "ga",
+      "western": "D#4"
+    },
+    {
+      "t": 20.5,
+      "midi": 65,
+      "duration": 6,
+      "sargam": "Ga",
+      "western": "F4"
+    },
+    {
+      "t": 27.75,
+      "midi": 67,
+      "duration": 6,
+      "sargam": "Pa",
+      "western": "G4"
+    },
+    {
+      "t": 35,
+      "midi": 69,
+      "duration": 5,
+      "sargam": "Dha",
+      "western": "A4"
+    },
+    {
+      "t": 41,
+      "midi": 72,
+      "duration": 5,
+      "sargam": "Sa",
+      "western": "C5"
+    },
+    {
+      "t": 47.5,
+      "midi": 69,
+      "duration": 5,
+      "sargam": "Dha",
+      "western": "A4"
+    },
+    {
+      "t": 53.5,
+      "midi": 67,
+      "duration": 6,
+      "sargam": "Pa",
+      "western": "G4"
+    },
+    {
+      "t": 60.75,
+      "midi": 65,
+      "duration": 5,
+      "sargam": "Ga",
+      "western": "F4"
+    },
+    {
+      "t": 66.75,
+      "midi": 63,
+      "duration": 5,
+      "sargam": "ga",
+      "western": "D#4"
+    },
+    {
+      "t": 72.75,
+      "midi": 62,
+      "duration": 5,
+      "sargam": "Re",
+      "western": "D4"
+    },
+    {
+      "t": 78.75,
+      "midi": 60,
+      "duration": 10,
+      "sargam": "Sa",
+      "western": "C4"
+    },
+    {
+      "t": 91.75,
+      "midi": 60,
+      "duration": 7,
+      "sargam": "Sa",
+      "western": "C4"
+    },
+    {
+      "t": 100.25,
+      "midi": 62,
+      "duration": 5,
+      "sargam": "Re",
+      "western": "D4"
+    },
+    {
+      "t": 106.25,
+      "midi": 63,
+      "duration": 5,
+      "sargam": "ga",
+      "western": "D#4"
+    },
+    {
+      "t": 112.25,
+      "midi": 65,
+      "duration": 6,
+      "sargam": "Ga",
+      "western": "F4"
+    },
+    {
+      "t": 119.5,
+      "midi": 67,
+      "duration": 6,
+      "sargam": "Pa",
+      "western": "G4"
+    },
+    {
+      "t": 126.75,
+      "midi": 69,
+      "duration": 5,
+      "sargam": "Dha",
+      "western": "A4"
+    },
+    {
+      "t": 132.75,
+      "midi": 72,
+      "duration": 5,
+      "sargam": "Sa",
+      "western": "C5"
+    },
+    {
+      "t": 139.25,
+      "midi": 69,
+      "duration": 5,
+      "sargam": "Dha",
+      "western": "A4"
+    },
+    {
+      "t": 145.25,
+      "midi": 67,
+      "duration": 6,
+      "sargam": "Pa",
+      "western": "G4"
+    },
+    {
+      "t": 152.5,
+      "midi": 65,
+      "duration": 5,
+      "sargam": "Ga",
+      "western": "F4"
+    },
+    {
+      "t": 158.5,
+      "midi": 63,
+      "duration": 5,
+      "sargam": "ga",
+      "western": "D#4"
+    },
+    {
+      "t": 164.5,
+      "midi": 62,
+      "duration": 5,
+      "sargam": "Re",
+      "western": "D4"
+    },
+    {
+      "t": 170.5,
+      "midi": 60,
+      "duration": 10,
+      "sargam": "Sa",
+      "western": "C4"
+    },
+    {
+      "t": 183.5,
+      "midi": 60,
+      "duration": 7,
+      "sargam": "Sa",
+      "western": "C4"
+    },
+    {
+      "t": 192,
+      "midi": 62,
+      "duration": 5,
+      "sargam": "Re",
+      "western": "D4"
+    },
+    {
+      "t": 198,
+      "midi": 63,
+      "duration": 5,
+      "sargam": "ga",
+      "western": "D#4"
+    },
+    {
+      "t": 204,
+      "midi": 65,
+      "duration": 6,
+      "sargam": "Ga",
+      "western": "F4"
+    },
+    {
+      "t": 211.25,
+      "midi": 67,
+      "duration": 6,
+      "sargam": "Pa",
+      "western": "G4"
+    },
+    {
+      "t": 218.5,
+      "midi": 69,
+      "duration": 5,
+      "sargam": "Dha",
+      "western": "A4"
+    },
+    {
+      "t": 224.5,
+      "midi": 72,
+      "duration": 5,
+      "sargam": "Sa",
+      "western": "C5"
+    },
+    {
+      "t": 231,
+      "midi": 69,
+      "duration": 5,
+      "sargam": "Dha",
+      "western": "A4"
+    },
+    {
+      "t": 237,
+      "midi": 67,
+      "duration": 6,
+      "sargam": "Pa",
+      "western": "G4"
+    },
+    {
+      "t": 244.25,
+      "midi": 65,
+      "duration": 5,
+      "sargam": "Ga",
+      "western": "F4"
+    },
+    {
+      "t": 250.25,
+      "midi": 63,
+      "duration": 5,
+      "sargam": "ga",
+      "western": "D#4"
+    },
+    {
+      "t": 256.25,
+      "midi": 62,
+      "duration": 5,
+      "sargam": "Re",
+      "western": "D4"
+    },
+    {
+      "t": 262.25,
+      "midi": 60,
+      "duration": 10,
+      "sargam": "Sa",
+      "western": "C4"
+    },
+    {
+      "t": 275.25,
+      "midi": 65,
+      "duration": 8,
+      "sargam": "Ga",
+      "western": "F4"
+    },
+    {
+      "t": 285.25,
+      "midi": 60,
+      "duration": 14,
+      "sargam": "Sa",
+      "western": "C4"
+    }
+  ]
+}

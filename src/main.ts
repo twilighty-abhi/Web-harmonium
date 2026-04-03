@@ -27,11 +27,18 @@ import type { TutorialMode } from './state.js'
 import { TutorialPlayer } from './tutorial/player.js'
 import type { Song, SongIndexEntry } from './tutorial/types.js'
 
+interface RagaIndexEntry {
+  id: string
+  title: string
+  mood: string
+}
+
 const pressedPhysical = new Set<string>()
 let activeMidiFromUser = new Set<number>()
 const slotToActiveMidi = new Map<string, number>()
 let loadedSong: Song | null = null
 let songIndex: SongIndexEntry[] = []
+let ragaIndex: RagaIndexEntry[] = []
 
 function isBlackKey(slot: KeySlot): boolean {
   const m =
@@ -98,6 +105,10 @@ app.innerHTML = `
   </div>
   <button type="button" class="drawer-toggle" id="drawer-toggle" aria-expanded="true">Lessons panel</button>
   <aside class="drawer" id="drawer" aria-label="Tutorials and teacher">
+    <h2>Calming ragas</h2>
+    <p class="lesson-meta raga-blurb">Soft, slow loops with warm bass-heavy tone and extra reverb. Listen only — repeats until you stop or switch.</p>
+    <ul class="song-list raga-list" id="raga-list"></ul>
+    <hr class="drawer-sep" />
     <h2>Assistant teacher</h2>
     <ul class="song-list" id="song-list"></ul>
     <p class="lesson-meta" id="lesson-desc">Choose a lesson.</p>
@@ -197,6 +208,7 @@ const elStart = document.getElementById('start-overlay')!
 const elKeysRows = document.getElementById('keys-rows')!
 const elLegend = document.getElementById('legend-hint')!
 const elSongList = document.getElementById('song-list')!
+const elRagaList = document.getElementById('raga-list')!
 const elLessonDesc = document.getElementById('lesson-desc')!
 const elTimelineBar = document.getElementById('timeline-bar')!
 const elNextHint = document.getElementById('next-hint')!
@@ -281,8 +293,15 @@ const player = new TutorialPlayer({
     const song = loadedSong
     if (!song) return
     const mentor = state.tutorialMode === 'playAlong' || state.tutorialMode === 'youTry'
+    const ci = Math.round(state.countInBars * 4)
+    if (state.ragaAmbient && song.lengthBeats > 0) {
+      const raw = beat - ci
+      const wrapped = ((raw % song.lengthBeats) + song.lengthBeats) % song.lengthBeats
+      elTimelineBar.style.width = `${Math.min(100, (wrapped / song.lengthBeats) * 100)}%`
+      if (ev) elNextHint.textContent = `Relax: ${ev.sargam} · ${ev.western}`
+      return
+    }
     if (!mentor) {
-      const ci = Math.round(state.countInBars * 4)
       const total = ci + song.lengthBeats
       const pct = Math.min(100, (beat / total) * 100)
       elTimelineBar.style.width = `${pct}%`
@@ -310,7 +329,9 @@ const player = new TutorialPlayer({
       percent >= 72 ? 'var(--success)' : percent >= 50 ? 'var(--honey-light)' : '#e8a0a0'
   },
   onEnd: () => {
-    if (state.tutorialMode === 'watch') {
+    if (state.ragaAmbient) {
+      elFeedback.textContent = ''
+    } else if (state.tutorialMode === 'watch') {
       elFeedback.textContent = 'Lesson complete — pick another or replay.'
       elFeedback.style.color = 'var(--text)'
     }
@@ -528,16 +549,68 @@ async function loadSongIndex(): Promise<void> {
   if (songIndex[0]) await selectSong(songIndex[0].id)
 }
 
+async function loadRagaIndex(): Promise<void> {
+  const res = await fetch('/ragas/index.json')
+  ragaIndex = (await res.json()) as RagaIndexEntry[]
+  elRagaList.innerHTML = ''
+  for (const entry of ragaIndex) {
+    const li = document.createElement('li')
+    const b = document.createElement('button')
+    b.type = 'button'
+    b.textContent = `${entry.title} · ${entry.mood}`
+    b.dataset.id = entry.id
+    b.addEventListener('click', () => void selectRaga(entry.id))
+    li.append(b)
+    elRagaList.append(li)
+  }
+}
+
+async function selectRaga(id: string): Promise<void> {
+  const res = await fetch(`/ragas/${id}.json`)
+  loadedSong = (await res.json()) as Song
+  player.load(loadedSong)
+  setState({
+    ragaAmbient: true,
+    selectedRagaId: id,
+    selectedSongId: null,
+    tutorialBpm: loadedSong.bpm,
+    playbackSpeed: 0.78,
+    countInBars: 0,
+    loopEnabled: false,
+    reverb: 0.55,
+    masterVolume: 0.66,
+    reedBass: 0.9,
+    reedMid: 0.38,
+    reedTreble: 0.14,
+    activePreset: 'soft',
+  })
+  elLessonDesc.textContent = loadedSong.description
+  elDrawer.classList.add('raga-mode')
+  document.querySelectorAll('#song-list button').forEach((b) => b.classList.remove('selected'))
+  document.querySelectorAll('#raga-list button').forEach((b) => {
+    b.classList.toggle('selected', (b as HTMLButtonElement).dataset.id === id)
+  })
+  syncControlsFromState()
+  elNextHint.textContent = 'Press Play — soft, slow loop. Adjust reverb + bass in Sound & reeds.'
+  elFeedback.textContent = ''
+}
+
 async function selectSong(id: string): Promise<void> {
   const res = await fetch(`/songs/${id}.json`)
   loadedSong = (await res.json()) as Song
   player.load(loadedSong)
-  state.selectedSongId = id
+  setState({
+    ragaAmbient: false,
+    selectedRagaId: null,
+    selectedSongId: id,
+    tutorialBpm: loadedSong.bpm,
+  })
   elLessonDesc.textContent = loadedSong.description
-  document.querySelectorAll('.song-list button').forEach((b) => {
+  elDrawer.classList.remove('raga-mode')
+  document.querySelectorAll('#raga-list button').forEach((b) => b.classList.remove('selected'))
+  document.querySelectorAll('#song-list button').forEach((b) => {
     b.classList.toggle('selected', (b as HTMLButtonElement).dataset.id === id)
   })
-  setState({ tutorialBpm: loadedSong.bpm })
   ;(document.getElementById('rng-bpm') as HTMLInputElement).value = String(loadedSong.bpm)
   updateLessonSliderReadouts()
   if (state.metronomeOn) setMetronomeBpm(loadedSong.bpm)
@@ -612,6 +685,4 @@ subscribe(() => {
 
 renderKeys()
 syncControlsFromState()
-void loadSongIndex()
-
-inject()
+void Promise.all([loadSongIndex(), loadRagaIndex()])

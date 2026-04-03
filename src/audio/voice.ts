@@ -50,12 +50,19 @@ function loopEndForBuffer(buf: AudioBuffer): number {
   return Math.max(LOOP_START_SEC + 0.12, cap)
 }
 
+/** Optional softer attack / level (used for calming raga loops). */
+export interface NoteOnOptions {
+  attackSec?: number
+  velScale?: number
+}
+
 export function noteOn(
   midi: number,
   velocity: number,
   reeds: ReedGains,
   dryBus: GainNode,
   wetBus: GainNode,
+  opts?: NoteOnOptions,
 ): void {
   if (!harmoniumBuffer) return
   const context = getAudioContext()
@@ -79,7 +86,9 @@ export function noteOn(
   if (tr > 0.28) add(midi + 12, 0.24 * tr)
   if (m > 0.55) add(midi + 12, 0.12 * m)
 
-  const vel = Math.max(0.06, Math.min(1, velocity)) * reedGate * 0.38
+  const attackSec = opts?.attackSec ?? 0.028
+  const velScale = opts?.velScale ?? 1
+  const vel = Math.max(0.06, Math.min(1, velocity)) * reedGate * 0.38 * velScale
   const loopEnd = loopEndForBuffer(harmoniumBuffer)
 
   const layers: Layer[] = []
@@ -93,7 +102,7 @@ export function noteOn(
 
     const g = context.createGain()
     g.gain.setValueAtTime(0.0001, t)
-    g.gain.exponentialRampToValueAtTime(Math.max(0.002, vel * weight), t + 0.028)
+    g.gain.exponentialRampToValueAtTime(Math.max(0.002, vel * weight), t + attackSec)
 
     src.connect(g)
     g.connect(dryBus)

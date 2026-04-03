@@ -1,4 +1,4 @@
-import { playNote, releaseNote, syncLevels } from '../audio/engine.js'
+import { playNote, playRagaNote, releaseNote, releaseRagaNote, syncLevels } from '../audio/engine.js'
 import { state } from '../state.js'
 import { buildPhraseSegments, type PhraseSegment } from './segments.js'
 import type { Song, SongEvent } from './types.js'
@@ -120,12 +120,62 @@ export class TutorialPlayer {
     this.stopPlaybackOnly()
     this.mentorFrozen = null
 
+    if (state.ragaAmbient) {
+      this.startRagaAmbientWatch()
+      return
+    }
+
     if (state.tutorialMode === 'playAlong' || state.tutorialMode === 'youTry') {
       this.startMentorFlow({ skipDemo: state.tutorialMode === 'youTry' })
       return
     }
 
     this.startClassicWatch()
+  }
+
+  /** Continuous loop: slow raga-style phrases, no count-in, seamless restarts. */
+  private startRagaAmbientWatch(): void {
+    if (!this.song) return
+    this.useMentor = false
+    this.mentorPhase = 'off'
+    this.countInBeats = 0
+    this.musicStartSec = this.nowSec()
+    this.status = 'playing'
+    this.scheduleRagaNotesOnce()
+    this.loop()
+  }
+
+  private scheduleRagaNotesOnce(): void {
+    if (!this.song || !state.ragaAmbient) return
+    const bd = this.beatDurationSec()
+    const scheduleAt = this.nowSec()
+    this.musicStartSec = scheduleAt
+
+    for (const ev of this.song.events) {
+      const tOn = this.musicStartSec + ev.t * bd
+      const tOnMs = Math.max(0, (tOn - scheduleAt) * 1000)
+      const durSec = Math.max(0.15, ev.duration * bd * 0.97)
+      const idOn = window.setTimeout(() => {
+        if (this.status === 'idle' || this.status === 'paused') return
+        syncLevels()
+        playRagaNote(ev.midi, 0.17)
+      }, tOnMs)
+      const idOff = window.setTimeout(() => releaseRagaNote(ev.midi), tOnMs + durSec * 1000)
+      this.timeouts.push(idOn, idOff)
+    }
+
+    const endT = this.musicStartSec + this.song.lengthBeats * bd
+    const totalMs = Math.max(0, (endT - scheduleAt) * 1000) + 400
+    this.timeouts.push(
+      window.setTimeout(() => {
+        if (this.status === 'idle' || this.status === 'paused') return
+        if (!state.ragaAmbient || !this.song) {
+          this.finishSongClassic()
+          return
+        }
+        this.scheduleRagaNotesOnce()
+      }, totalMs),
+    )
   }
 
   private startMentorFlow(opts: { skipDemo: boolean }): void {
@@ -438,6 +488,16 @@ export class TutorialPlayer {
   }
 
   pause(): void {
+    if (
+      state.ragaAmbient &&
+      (this.status === 'playing' || this.status === 'countIn')
+    ) {
+      this.clearTimeouts()
+      cancelAnimationFrame(this.raf)
+      this.frozenBeat = null
+      this.status = 'paused'
+      return
+    }
     if (this.status === 'mentorWait') {
       this.mentorFrozen = {
         segmentIndex: this.mentorSegmentIndex,
@@ -458,6 +518,14 @@ export class TutorialPlayer {
 
   resume(): void {
     if (this.status !== 'paused' || !this.song) return
+
+    if (state.ragaAmbient) {
+      this.frozenBeat = null
+      this.status = 'playing'
+      this.scheduleRagaNotesOnce()
+      this.loop()
+      return
+    }
 
     if (this.mentorFrozen) {
       this.mentorSegmentIndex = this.mentorFrozen.segmentIndex
@@ -585,8 +653,14 @@ export class TutorialPlayer {
       const ci = this.countInBeats
       let songBeat = b - ci
 
+      if (state.ragaAmbient && song.lengthBeats > 0) {
+        songBeat =
+          ((songBeat % song.lengthBeats) + song.lengthBeats) % song.lengthBeats
+      }
+
       if (
         state.loopEnabled &&
+        !state.ragaAmbient &&
         songBeat >= state.loopEndBeat &&
         state.loopEndBeat > state.loopStartBeat &&
         !this.useMentor
@@ -601,6 +675,7 @@ export class TutorialPlayer {
       }
 
       if (
+        !state.ragaAmbient &&
         songBeat >= song.lengthBeats &&
         b >= ci + song.lengthBeats - 0.01 &&
         !(this.useMentor && this.mentorPhase === 'fullRun')

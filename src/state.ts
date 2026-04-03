@@ -20,6 +20,9 @@ export interface AppState {
   loopStartBeat: number
   loopEndBeat: number
   selectedSongId: string | null
+  /** Calming raga loop mode (separate from lessons). */
+  ragaAmbient: boolean
+  selectedRagaId: string | null
   tutorialMode: TutorialMode
   activePreset: 'practice' | 'bright' | 'soft'
   /** Shift+key adds +12 MIDI for that press only — handled in input layer */
@@ -47,6 +50,8 @@ export const state: AppState = {
   loopStartBeat: 0,
   loopEndBeat: 4,
   selectedSongId: null,
+  ragaAmbient: false,
+  selectedRagaId: null,
   tutorialMode: 'watch',
   activePreset: 'practice',
   shiftOctaveNudge: true,

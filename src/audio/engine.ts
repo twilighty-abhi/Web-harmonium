@@ -71,8 +71,27 @@ export function playNote(midi: number, velocity = 0.75): void {
   noteOn(midi, velocity, reeds, dryGain!, wetGain!)
 }
 
+/** Calming raga loops: warm bass-heavy reeds, slow attack, lower level, long release via caller. */
+export function playRagaNote(midi: number, velocity = 0.19): void {
+  ensureGraph()
+  syncLevels()
+  const reeds: ReedGains = {
+    bass: Math.min(1, state.reedBass + 0.2),
+    mid: Math.max(0.1, state.reedMid * 0.65),
+    treble: Math.max(0.04, state.reedTreble * 0.28),
+  }
+  noteOn(midi, velocity, reeds, dryGain!, wetGain!, {
+    attackSec: 0.1,
+    velScale: 0.68,
+  })
+}
+
 export function releaseNote(midi: number): void {
   noteOff(midi)
+}
+
+export function releaseRagaNote(midi: number): void {
+  noteOff(midi, 0.55)
 }
 
 export function stopEveryVoice(): void {

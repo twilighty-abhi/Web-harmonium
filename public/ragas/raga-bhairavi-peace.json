@@ -1,0 +1,220 @@
+{
+  "id": "raga-bhairavi-peace",
+  "title": "Bhairavi — peace loop",
+  "description": "Deep, grounded movement with generous pauses.",
+  "bpm": 37,
+  "difficulty": "easy",
+  "lengthBeats": 207,
+  "events": [
+    {
+      "t": 0,
+      "midi": 60,
+      "duration": 6,
+      "sargam": "Sa",
+      "western": "C4"
+    },
+    {
+      "t": 7.25,
+      "midi": 61,
+      "duration": 5,
+      "sargam": "re",
+      "western": "C#4"
+    },
+    {
+      "t": 13.25,
+      "midi": 63,
+      "duration": 5,
+      "sargam": "Ga",
+      "western": "D#4"
+    },
+    {
+      "t": 19.25,
+      "midi": 65,
+      "duration": 6,
+      "sargam": "Ma",
+      "western": "F4"
+    },
+    {
+      "t": 26.5,
+      "midi": 67,
+      "duration": 5,
+      "sargam": "Pa",
+      "western": "G4"
+    },
+    {
+      "t": 32.5,
+      "midi": 68,
+      "duration": 5,
+      "sargam": "dha",
+      "western": "G#4"
+    },
+    {
+      "t": 38.5,
+      "midi": 70,
+      "duration": 5,
+      "sargam": "Ni",
+      "western": "A#4"
+    },
+    {
+      "t": 44.75,
+      "midi": 72,
+      "duration": 4,
+      "sargam": "Sa",
+      "western": "C5"
+    },
+    {
+      "t": 50.25,
+      "midi": 70,
+      "duration": 5,
+      "sargam": "Ni",
+      "western": "A#4"
+    },
+    {
+      "t": 56.25,
+      "midi": 68,
+      "duration": 5,
+      "sargam": "dha",
+      "western": "G#4"
+    },
+    {
+      "t": 62.25,
+      "midi": 65,
+      "duration": 6,
+      "sargam": "Ma",
+      "western": "F4"
+    },
+    {
+      "t": 69.5,
+      "midi": 63,
+      "duration": 5,
+      "sargam": "Ga",
+      "western": "D#4"
+    },
+    {
+      "t": 75.5,
+      "midi": 61,
+      "duration": 5,
+      "sargam": "re",
+      "western": "C#4"
+    },
+    {
+      "t": 81.5,
+      "midi": 60,
+      "duration": 9,
+      "sargam": "Sa",
+      "western": "C4"
+    },
+    {
+      "t": 93,
+      "midi": 60,
+      "duration": 6,
+      "sargam": "Sa",
+      "western": "C4"
+    },
+    {
+      "t": 100.25,
+      "midi": 61,
+      "duration": 5,
+      "sargam": "re",
+      "western": "C#4"
+    },
+    {
+      "t": 106.25,
+      "midi": 63,
+      "duration": 5,
+      "sargam": "Ga",
+      "western": "D#4"
+    },
+    {
+      "t": 112.25,
+      "midi": 65,
+      "duration": 6,
+      "sargam": "Ma",
+      "western": "F4"
+    },
+    {
+      "t": 119.5,
+      "midi": 67,
+      "duration": 5,
+      "sargam": "Pa",
+      "western": "G4"
+    },
+    {
+      "t": 125.5,
+      "midi": 68,
+      "duration": 5,
+      "sargam": "dha",
+      "western": "G#4"
+    },
+    {
+      "t": 131.5,
+      "midi": 70,
+      "duration": 5,
+      "sargam": "Ni",
+      "western": "A#4"
+    },
+    {
+      "t": 137.75,
+      "midi": 72,
+      "duration": 4,
+      "sargam": "Sa",
+      "western": "C5"
+    },
+    {
+      "t": 143.25,
+      "midi": 70,
+      "duration": 5,
+      "sargam": "Ni",
+      "western": "A#4"
+    },
+    {
+      "t": 149.25,
+      "midi": 68,
+      "duration": 5,
+      "sargam": "dha",
+      "western": "G#4"
+    },
+    {
+      "t": 155.25,
+      "midi": 65,
+      "duration": 6,
+      "sargam": "Ma",
+      "western": "F4"
+    },
+    {
+      "t": 162.5,
+      "midi": 63,
+      "duration": 5,
+      "sargam": "Ga",
+      "western": "D#4"
+    },
+    {
+      "t": 168.5,
+      "midi": 61,
+      "duration": 5,
+      "sargam": "re",
+      "western": "C#4"
+    },
+    {
+      "t": 174.5,
+      "midi": 60,
+      "duration": 9,
+      "sargam": "Sa",
+      "western": "C4"
+    },
+    {
+      "t": 186,
+      "midi": 65,
+      "duration": 7,
+      "sargam": "Ma",
+      "western": "F4"
+    },
+    {
+      "t": 195,
+      "midi": 60,
+      "duration": 12,
+      "sargam": "Sa",
+      "western": "C4"
+    }
+  ]
+}

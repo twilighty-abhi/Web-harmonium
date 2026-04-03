@@ -1,0 +1,185 @@
+{
+  "id": "raga-yaman-calm",
+  "title": "Yaman — calm loop",
+  "description": "Slow, spacious phrases with long sustains. For quiet listening.",
+  "bpm": 38,
+  "difficulty": "easy",
+  "lengthBeats": 154,
+  "events": [
+    {
+      "t": 0,
+      "midi": 60,
+      "duration": 5,
+      "sargam": "Sa",
+      "western": "C4"
+    },
+    {
+      "t": 6,
+      "midi": 64,
+      "duration": 4,
+      "sargam": "Ga",
+      "western": "E4"
+    },
+    {
+      "t": 10.75,
+      "midi": 67,
+      "duration": 5,
+      "sargam": "Pa",
+      "western": "G4"
+    },
+    {
+      "t": 16.75,
+      "midi": 69,
+      "duration": 4,
+      "sargam": "Dha",
+      "western": "A4"
+    },
+    {
+      "t": 21.5,
+      "midi": 71,
+      "duration": 4,
+      "sargam": "Ni",
+      "western": "B4"
+    },
+    {
+      "t": 26.5,
+      "midi": 72,
+      "duration": 5,
+      "sargam": "Sa",
+      "western": "C5"
+    },
+    {
+      "t": 33,
+      "midi": 71,
+      "duration": 4,
+      "sargam": "Ni",
+      "western": "B4"
+    },
+    {
+      "t": 37.75,
+      "midi": 67,
+      "duration": 5,
+      "sargam": "Pa",
+      "western": "G4"
+    },
+    {
+      "t": 43.75,
+      "midi": 64,
+      "duration": 5,
+      "sargam": "Ga",
+      "western": "E4"
+    },
+    {
+      "t": 49.75,
+      "midi": 62,
+      "duration": 4,
+      "sargam": "Re",
+      "western": "D4"
+    },
+    {
+      "t": 54.5,
+      "midi": 60,
+      "duration": 8,
+      "sargam": "Sa",
+      "western": "C4"
+    },
+    {
+      "t": 64.5,
+      "midi": 60,
+      "duration": 5,
+      "sargam": "Sa",
+      "western": "C4"
+    },
+    {
+      "t": 70.5,
+      "midi": 64,
+      "duration": 4,
+      "sargam": "Ga",
+      "western": "E4"
+    },
+    {
+      "t": 75.25,
+      "midi": 67,
+      "duration": 5,
+      "sargam": "Pa",
+      "western": "G4"
+    },
+    {
+      "t": 81.25,
+      "midi": 69,
+      "duration": 4,
+      "sargam": "Dha",
+      "western": "A4"
+    },
+    {
+      "t": 86,
+      "midi": 71,
+      "duration": 4,
+      "sargam": "Ni",
+      "western": "B4"
+    },
+    {
+      "t": 91,
+      "midi": 72,
+      "duration": 5,
+      "sargam": "Sa",
+      "western": "C5"
+    },
+    {
+      "t": 97.5,
+      "midi": 71,
+      "duration": 4,
+      "sargam": "Ni",
+      "western": "B4"
+    },
+    {
+      "t": 102.25,
+      "midi": 67,
+      "duration": 5,
+      "sargam": "Pa",
+      "western": "G4"
+    },
+    {
+      "t": 108.25,
+      "midi": 64,
+      "duration": 5,
+      "sargam": "Ga",
+      "western": "E4"
+    },
+    {
+      "t": 114.25,
+      "midi": 62,
+      "duration": 4,
+      "sargam": "Re",
+      "western": "D4"
+    },
+    {
+      "t": 119,
+      "midi": 60,
+      "duration": 8,
+      "sargam": "Sa",
+      "western": "C4"
+    },
+    {
+      "t": 129,
+      "midi": 64,
+      "duration": 6,
+      "sargam": "Ga",
+      "western": "E4"
+    },
+    {
+      "t": 136,
+      "midi": 67,
+      "duration": 6,
+      "sargam": "Pa",
+      "western": "G4"
+    },
+    {
+      "t": 144,
+      "midi": 60,
+      "duration": 10,
+      "sargam": "Sa",
+      "western": "C4"
+    }
+  ]
+}
