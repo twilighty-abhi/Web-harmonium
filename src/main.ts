@@ -105,10 +105,6 @@ app.innerHTML = `
   </div>
   <button type="button" class="drawer-toggle" id="drawer-toggle" aria-expanded="true">Lessons panel</button>
   <aside class="drawer" id="drawer" aria-label="Tutorials and teacher">
-    <h2>Calming ragas</h2>
-    <p class="lesson-meta raga-blurb">Soft, slow loops with warm bass-heavy tone and extra reverb. Listen only — repeats until you stop or switch.</p>
-    <ul class="song-list raga-list" id="raga-list"></ul>
-    <hr class="drawer-sep" />
     <h2>Assistant teacher</h2>
     <ul class="song-list" id="song-list"></ul>
     <p class="lesson-meta" id="lesson-desc">Choose a lesson.</p>
@@ -192,6 +188,11 @@ app.innerHTML = `
           <input type="range" id="rng-drone-lvl" min="0" max="1" step="0.01" />
         </label>
       </div>
+    </details>
+    <details class="lesson-group lesson-group--ragas">
+      <summary>Calming ragas</summary>
+      <p class="lesson-meta raga-blurb">Soft, slow loops with warm bass-heavy tone and extra reverb. Listen only — repeats until you stop or switch.</p>
+      <ul class="song-list raga-list" id="raga-list"></ul>
     </details>
   </aside>
 </div>

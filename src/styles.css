@@ -490,18 +490,17 @@ html.reduce-motion .key-cap {
   color: var(--honey-light);
 }
 
-.drawer-sep {
-  border: none;
-  border-top: 1px solid rgba(201, 162, 39, 0.22);
-  margin: 1rem 0 0.85rem;
-}
-
 .raga-blurb {
   margin-top: -0.35rem;
 }
 
 .drawer.raga-mode .mode-row {
   display: none;
+}
+
+.lesson-group--ragas .song-list {
+  max-height: 160px;
+  margin-bottom: 0;
 }
 
 .song-list {

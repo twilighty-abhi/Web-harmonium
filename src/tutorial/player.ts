@@ -1,4 +1,11 @@
-import { playNote, playRagaNote, releaseNote, releaseRagaNote, syncLevels } from '../audio/engine.js'
+import {
+  playNote,
+  playRagaNote,
+  releaseNote,
+  releaseRagaNote,
+  stopEveryVoice,
+  syncLevels,
+} from '../audio/engine.js'
 import { state } from '../state.js'
 import { buildPhraseSegments, type PhraseSegment } from './segments.js'
 import type { Song, SongEvent } from './types.js'
@@ -496,6 +503,8 @@ export class TutorialPlayer {
       cancelAnimationFrame(this.raf)
       this.frozenBeat = null
       this.status = 'paused'
+      stopEveryVoice()
+      this.cb.onHighlight(null, null)
       return
     }
     if (this.status === 'mentorWait') {
@@ -507,6 +516,8 @@ export class TutorialPlayer {
       this.status = 'paused'
       this.clearTimeouts()
       cancelAnimationFrame(this.raf)
+      stopEveryVoice()
+      this.cb.onHighlight(null, null)
       return
     }
     if (this.status !== 'playing' && this.status !== 'countIn') return
@@ -514,6 +525,8 @@ export class TutorialPlayer {
     this.status = 'paused'
     cancelAnimationFrame(this.raf)
     this.clearTimeouts()
+    stopEveryVoice()
+    this.cb.onHighlight(null, null)
   }
 
   resume(): void {
