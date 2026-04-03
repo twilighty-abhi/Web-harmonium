@@ -611,5 +611,4 @@ renderKeys()
 syncControlsFromState()
 void loadSongIndex()
 
-// Initialize Vercel Web Analytics
 inject()
