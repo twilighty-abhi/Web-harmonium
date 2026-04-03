@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" aria-hidden="true">
+  <defs>
+    <linearGradient id="wood" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5c3328"/>
+      <stop offset="100%" style="stop-color:#3d231c"/>
+    </linearGradient>
+    <linearGradient id="caseWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4b896"/>
+      <stop offset="100%" style="stop-color:#b8956a"/>
+    </linearGradient>
+    <linearGradient id="bellows" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a5a9e"/>
+      <stop offset="50%" style="stop-color:#2a7fd4"/>
+      <stop offset="100%" style="stop-color:#1a5a9e"/>
+    </linearGradient>
+  </defs>
+  <polygon points="40,200 120,140 280,150 340,220 320,260 80,270" fill="url(#wood)"/>
+  <polygon points="60,210 200,175 300,185 310,245 100,255" fill="url(#caseWood)"/>
+  <polygon points="280,100 340,80 360,140 300,165" fill="url(#bellows)"/>
+  <polygon points="290,105 335,90 350,135 305,155" fill="#1e6bb8" opacity="0.85"/>
+  <rect x="85" y="168" width="200" height="8" transform="skewX(-8)" fill="#c9a227" opacity="0.9"/>
+  <g fill="#c9a227">
+    <circle cx="95" cy="210" r="6"/><circle cx="118" cy="208" r="6"/><circle cx="141" cy="206" r="6"/>
+    <circle cx="164" cy="204" r="6"/><circle cx="187" cy="202" r="6"/><circle cx="210" cy="200" r="6"/>
+    <circle cx="233" cy="198" r="6"/><circle cx="256" cy="196" r="6"/><circle cx="279" cy="194" r="6"/>
+  </g>
+  <rect x="130" y="125" width="140" height="42" rx="2" transform="skewX(-12)" fill="#4a2c2a"/>
+  <g transform="skewX(-12) translate(128,128)">
+    <rect x="0" y="0" width="8" height="36" fill="#f5f0e6" stroke="#c4b8a8" stroke-width="0.5"/>
+    <rect x="10" y="0" width="5" height="22" fill="#1a1a1a"/>
+    <rect x="17" y="0" width="8" height="36" fill="#f5f0e6" stroke="#c4b8a8" stroke-width="0.5"/>
+    <rect x="27" y="0" width="5" height="22" fill="#1a1a1a"/>
+    <rect x="34" y="0" width="8" height="36" fill="#f5f0e6" stroke="#c4b8a8" stroke-width="0.5"/>
+    <rect x="44" y="0" width="8" height="36" fill="#f5f0e6" stroke="#c4b8a8" stroke-width="0.5"/>
+    <rect x="54" y="0" width="5" height="22" fill="#1a1a1a"/>
+    <rect x="61" y="0" width="8" height="36" fill="#f5f0e6" stroke="#c4b8a8" stroke-width="0.5"/>
+    <rect x="71" y="0" width="5" height="22" fill="#1a1a1a"/>
+    <rect x="78" y="0" width="8" height="36" fill="#f5f0e6" stroke="#c4b8a8" stroke-width="0.5"/>
+    <rect x="88" y="0" width="8" height="36" fill="#f5f0e6" stroke="#c4b8a8" stroke-width="0.5"/>
+    <rect x="98" y="0" width="5" height="22" fill="#1a1a1a"/>
+    <rect x="105" y="0" width="8" height="36" fill="#f5f0e6" stroke="#c4b8a8" stroke-width="0.5"/>
+    <rect x="115" y="0" width="5" height="22" fill="#1a1a1a"/>
+    <rect x="122" y="0" width="8" height="36" fill="#f5f0e6" stroke="#c4b8a8" stroke-width="0.5"/>
+  </g>
+  <rect x="155" y="248" width="45" height="6" rx="1" fill="#a8a8a8"/>
+</svg>
