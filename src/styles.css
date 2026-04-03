@@ -305,15 +305,6 @@ body {
   gap: 0.5rem;
 }
 
-.key-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3px;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 2px;
-}
-
 .key-cap {
   position: relative;
   cursor: pointer;

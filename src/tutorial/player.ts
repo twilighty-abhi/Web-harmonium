@@ -201,14 +201,13 @@ export class TutorialPlayer {
     const bd = this.beatDurationSec()
     const sorted = [...events].sort((a, b) => a.t - b.t || a.midi - b.midi)
     const tBase = Math.min(...sorted.map((e) => e.t))
-    const scheduleAt = this.nowSec()
     let maxEndSec = 0
 
     for (const ev of sorted) {
       const relOn = (ev.t - tBase) * bd
       const durSec = Math.max(0.1, ev.duration * bd * 0.9)
       maxEndSec = Math.max(maxEndSec, relOn + durSec)
-      const tOnMs = Math.max(0, (scheduleAt + relOn - scheduleAt) * 1000)
+      const tOnMs = Math.max(0, relOn * 1000)
       const idOn = window.setTimeout(() => {
         if (this.mentorPhase !== 'demo' || this.status === 'paused' || this.status === 'idle') return
         syncLevels()

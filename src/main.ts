@@ -25,6 +25,7 @@ import type { Song, SongIndexEntry } from './tutorial/types.js'
 
 const pressedPhysical = new Set<string>()
 let activeMidiFromUser = new Set<number>()
+const slotToActiveMidi = new Map<string, number>()
 let loadedSong: Song | null = null
 let songIndex: SongIndexEntry[] = []
 
@@ -52,7 +53,7 @@ app.innerHTML = `
 <div class="start-overlay" id="start-overlay" role="dialog" aria-modal="true" aria-labelledby="start-title">
   <div class="start-card">
     <h1 id="start-title">Web Harmonium</h1>
-    <p>Press Start to enable sound and load the harmonium samples (~2&nbsp;MB). One keybed row: <kbd>Z</kbd> = lowest (C3) → <kbd>6</kbd> = highest (F6). <kbd>Shift</kbd> + key raises an octave.</p>
+    <p>Press Start to enable sound and load the harmonium samples (~2&nbsp;MB). One keybed row: <kbd>Z</kbd> = lowest (C3) → <kbd>8</kbd> = highest (F6). <kbd>Shift</kbd> + key raises an octave.</p>
     <p class="start-status" id="start-status" aria-live="polite"></p>
     <button type="button" id="btn-start-audio">Start</button>
   </div>
@@ -244,17 +245,16 @@ function noteDown(slot: KeySlot): void {
   }
   if (activeMidiFromUser.has(midi)) return
   activeMidiFromUser.add(midi)
+  slotToActiveMidi.set(slot.code, midi)
   syncLevels()
   playNote(midi, 0.78)
   player.reportUserNote(midi)
 }
 
 function noteUp(slot: KeySlot): void {
-  let midi = userMidiForSlot(slot)
-  if (pressedPhysical.has('ShiftLeft') || pressedPhysical.has('ShiftRight')) {
-    midi += 12
-  }
-  if (!activeMidiFromUser.has(midi)) return
+  const midi = slotToActiveMidi.get(slot.code)
+  if (midi == null) return
+  slotToActiveMidi.delete(slot.code)
   activeMidiFromUser.delete(midi)
   releaseNote(midi)
 }
@@ -351,17 +351,10 @@ window.addEventListener('keydown', onKeyDown)
 window.addEventListener('keyup', onKeyUp)
 window.addEventListener('blur', () => {
   pressedPhysical.clear()
-  for (const slot of KEY_SLOTS) {
-    setKeyPressed(slot.code, false)
-    const midi = userMidiForSlot(slot)
-    const midiShift = midi + 12
-    ;[midi, midiShift].forEach((m) => {
-      if (activeMidiFromUser.has(m)) {
-        activeMidiFromUser.delete(m)
-        releaseNote(m)
-      }
-    })
-  }
+  for (const slot of KEY_SLOTS) setKeyPressed(slot.code, false)
+  for (const midi of activeMidiFromUser) releaseNote(midi)
+  activeMidiFromUser.clear()
+  slotToActiveMidi.clear()
 })
 
 document.getElementById('mode-row')!.addEventListener('click', (e) => {

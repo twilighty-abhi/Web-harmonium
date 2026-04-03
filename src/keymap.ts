@@ -105,6 +105,8 @@ const CODES_CHROMATIC_LOW_TO_HIGH: PhysicalCode[] = [
   'Digit4',
   'Digit5',
   'Digit6',
+  'Digit7',
+  'Digit8',
 ]
 
 export const KEY_SLOTS: KeySlot[] = CODES_CHROMATIC_LOW_TO_HIGH.map((code, i) => ({
