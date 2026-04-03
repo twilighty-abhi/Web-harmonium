@@ -781,3 +781,42 @@ html.reduce-motion .key-cap {
 .gh-link svg {
   flex-shrink: 0;
 }
+
+.seo-faq {
+  max-width: 920px;
+  margin: 0.5rem auto 0.75rem;
+  padding: 0 1.1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.seo-faq h2 {
+  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+  color: var(--honey-light);
+}
+
+.seo-faq details {
+  border: 1px solid rgba(201, 162, 39, 0.18);
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 10px;
+  padding: 0.35rem 0.65rem;
+  margin-bottom: 0.35rem;
+}
+
+.seo-faq summary {
+  cursor: pointer;
+  color: var(--honey-light);
+  font-weight: 650;
+  list-style: none;
+}
+
+.seo-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.seo-faq p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  line-height: 1.35;
+}

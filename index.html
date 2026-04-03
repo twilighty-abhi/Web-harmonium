@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="robots" content="index,follow" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#4a2f26" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Harmonium — Learn Harmonium Online (Free)</title>
     <meta
@@ -20,7 +24,7 @@
       content="Play and learn harmonium in your browser with a mentor-style teacher, lessons, metronome, transpose, drone (Sa), and 42 keys."
     />
     <meta property="og:url" content="https://harmonium.abhiramnj.com/" />
-    <meta property="og:image" content="/harmonium-hero.png" />
+    <meta property="og:image" content="https://harmonium.abhiramnj.com/harmonium-hero.png" />
     <meta property="og:image:alt" content="Web Harmonium — realistic keys and lesson teacher" />
 
     <!-- Twitter -->
@@ -30,7 +34,7 @@
       name="twitter:description"
       content="A free online harmonium to play and learn with lessons and mentor mode."
     />
-    <meta name="twitter:image" content="/harmonium-hero.png" />
+    <meta name="twitter:image" content="https://harmonium.abhiramnj.com/harmonium-hero.png" />
 
     <!-- Structured data -->
     <script type="application/ld+json">
@@ -51,9 +55,74 @@
         }
       }
     </script>
+
+    <!-- FAQ structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Web Harmonium?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Web Harmonium is a free online harmonium you can play in your browser, with lessons and a mentor-style play-along mode."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many keys does it have?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It features 42 chromatic keys (C3–F6) rendered as realistic ivory and ebony-style keys."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I learn harmonium online for free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Choose a lesson, follow the phrase-by-phrase mentor flow, and finish with a scored full-run."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Play Along / You Try mean?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Play Along demos each phrase first; You Try skips the demo audio and uses highlights only."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to install anything?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No—everything runs in the browser using the Web Audio API. Click Start once to load the harmonium samples."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="app"></div>
+    <section class="seo-faq" aria-label="Frequently Asked Questions">
+      <h2>Learn Harmonium Online (FAQ)</h2>
+      <details>
+        <summary>What is Web Harmonium?</summary>
+        <p>Web Harmonium is a free online harmonium you can play in your browser, with lessons and a mentor-style play-along mode.</p>
+      </details>
+      <details>
+        <summary>How many keys does it have?</summary>
+        <p>It features 42 chromatic keys (C3–F6) rendered as realistic ivory and ebony-style keys.</p>
+      </details>
+      <details>
+        <summary>Can I learn harmonium online for free?</summary>
+        <p>Yes. Choose a lesson, follow the phrase-by-phrase mentor flow, and finish with a scored full-run.</p>
+      </details>
+    </section>
     <noscript>
       <main style="max-width: 900px; margin: 2rem auto; padding: 0 1rem; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;">
         <h1>Web Harmonium</h1>

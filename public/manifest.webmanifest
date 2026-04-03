@@ -1,0 +1,16 @@
+{
+  "name": "Web Harmonium",
+  "short_name": "Web Harmonium",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a100c",
+  "theme_color": "#4a2f26",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+
