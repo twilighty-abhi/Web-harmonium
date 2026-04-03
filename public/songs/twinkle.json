@@ -1,0 +1,22 @@
+{
+  "id": "twinkle",
+  "title": "Twinkle Twinkle Little Star",
+  "description": "Classic tune in C. Use Watch first, then Play along.",
+  "bpm": 72,
+  "difficulty": "easy",
+  "lengthBeats": 8,
+  "events": [
+    { "t": 0, "midi": 60, "duration": 0.5, "sargam": "Sa", "western": "C4" },
+    { "t": 0.5, "midi": 60, "duration": 0.5, "sargam": "Sa", "western": "C4" },
+    { "t": 1, "midi": 67, "duration": 0.5, "sargam": "Pa", "western": "G4" },
+    { "t": 1.5, "midi": 67, "duration": 0.5, "sargam": "Pa", "western": "G4" },
+    { "t": 2, "midi": 69, "duration": 0.5, "sargam": "Dha", "western": "A4" },
+    { "t": 2.5, "midi": 69, "duration": 0.5, "sargam": "Dha", "western": "A4" },
+    { "t": 3, "midi": 67, "duration": 1, "sargam": "Pa", "western": "G4" },
+    { "t": 4, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 4.5, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 5, "midi": 62, "duration": 0.5, "sargam": "Re", "western": "D4" },
+    { "t": 5.5, "midi": 62, "duration": 0.5, "sargam": "Re", "western": "D4" },
+    { "t": 6, "midi": 60, "duration": 1, "sargam": "Sa", "western": "C4" }
+  ]
+}
