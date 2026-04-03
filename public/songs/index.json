@@ -1,0 +1,23 @@
+[
+  { "id": "sargam-scale", "title": "Sa Re Ga Ma — scale", "difficulty": "easy" },
+  { "id": "do-re-mi", "title": "Do-Re-Mi (opening)", "difficulty": "easy" },
+  { "id": "hot-cross-buns", "title": "Hot Cross Buns", "difficulty": "easy" },
+  { "id": "mary-lamb", "title": "Mary Had a Little Lamb", "difficulty": "easy" },
+  { "id": "twinkle", "title": "Twinkle Twinkle Little Star", "difficulty": "easy" },
+  { "id": "row-row-row", "title": "Row, Row, Row Your Boat", "difficulty": "easy" },
+  { "id": "happy-birthday", "title": "Happy Birthday (opening)", "difficulty": "easy" },
+  { "id": "frere-jacques", "title": "Frère Jacques / Are you sleeping", "difficulty": "easy" },
+  { "id": "you-are-my-sunshine", "title": "You Are My Sunshine (first verse)", "difficulty": "easy" },
+  { "id": "count-on-me", "title": "Count on Me — Bruno Mars (opening)", "difficulty": "easy" },
+  { "id": "jvke-her", "title": "Her — JVKE (opening phrase)", "difficulty": "medium" },
+  { "id": "someone-like-you", "title": "Someone Like You — Adele (opening)", "difficulty": "medium" },
+  { "id": "fix-you", "title": "Fix You — Coldplay (opening)", "difficulty": "medium" },
+  { "id": "the-scientist", "title": "The Scientist — Coldplay (opening)", "difficulty": "medium" },
+  { "id": "let-her-go", "title": "Let Her Go — Passenger (opening)", "difficulty": "medium" },
+  { "id": "we-dont-talk-anymore", "title": "We Don't Talk Anymore — Charlie Puth (hook)", "difficulty": "medium" },
+  { "id": "om-jai", "title": "Om Jai Jagadish Hare (opening)", "difficulty": "easy" },
+  { "id": "raghupati", "title": "Raghupati Raghav (fragment)", "difficulty": "easy" },
+  { "id": "jana-gana", "title": "Jana Gana Mana (first line)", "difficulty": "medium" },
+  { "id": "sare-jahan", "title": "Sare Jahan Se Achha (opening)", "difficulty": "medium" },
+  { "id": "vande-mataram", "title": "Vande Mataram (fragment)", "difficulty": "medium" }
+]
