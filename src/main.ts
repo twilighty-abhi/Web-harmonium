@@ -1,6 +1,9 @@
 import './styles.css'
 import { inject } from '@vercel/analytics'
 import { resumeAudio } from './audio/context.js'
+
+// Initialize Vercel Web Analytics
+inject()
 import {
   playNote,
   releaseNote,
