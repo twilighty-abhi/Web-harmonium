@@ -704,3 +704,35 @@ html.reduce-motion .key-cap {
   color: var(--text);
   font: inherit;
 }
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 1rem 1.5rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  border-top: 1px solid rgba(201, 162, 39, 0.15);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.site-footer a {
+  color: var(--honey-light);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.site-footer a:hover {
+  color: var(--gold-bright);
+}
+
+.gh-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.gh-link svg {
+  flex-shrink: 0;
+}
