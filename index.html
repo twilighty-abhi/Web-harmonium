@@ -4,11 +4,68 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Play a harmonium in the browser with keyboard, tutorials, and teacher mode." />
-    <title>Web Harmonium</title>
+    <title>Web Harmonium — Learn Harmonium Online (Free)</title>
+    <meta
+      name="description"
+      content="Web Harmonium is a free online harmonium you can play in the browser. Learn harmonium with lessons, phrase-by-phrase mentor mode, metronome, transpose, drone (Sa), and 42 realistic keys."
+    />
+    <link rel="canonical" href="https://harmonium.abhiramnj.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Web Harmonium" />
+    <meta property="og:title" content="Web Harmonium — Learn Harmonium Online (Free)" />
+    <meta
+      property="og:description"
+      content="Play and learn harmonium in your browser with a mentor-style teacher, lessons, metronome, transpose, drone (Sa), and 42 keys."
+    />
+    <meta property="og:url" content="https://harmonium.abhiramnj.com/" />
+    <meta property="og:image" content="/harmonium-hero.png" />
+    <meta property="og:image:alt" content="Web Harmonium — realistic keys and lesson teacher" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Web Harmonium — Learn Harmonium Online (Free)" />
+    <meta
+      name="twitter:description"
+      content="A free online harmonium to play and learn with lessons and mentor mode."
+    />
+    <meta name="twitter:image" content="/harmonium-hero.png" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Web Harmonium",
+        "url": "https://harmonium.abhiramnj.com/",
+        "applicationCategory": "MusicApplication",
+        "operatingSystem": "Web",
+        "description": "A free online harmonium you can play in the browser. Learn harmonium with lessons, mentor mode, metronome, transpose, and drone (Sa).",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "image": "https://harmonium.abhiramnj.com/harmonium-hero.png",
+        "creator": {
+          "@type": "Person",
+          "name": "Abhiram",
+          "url": "https://abhiramnj.com"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="app"></div>
+    <noscript>
+      <main style="max-width: 900px; margin: 2rem auto; padding: 0 1rem; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;">
+        <h1>Web Harmonium</h1>
+        <p>
+          Web Harmonium is a free online harmonium you can play in the browser. Learn harmonium with interactive lessons, a mentor-style play-along mode, metronome, transpose, drone (Sa), and 42 keys.
+        </p>
+        <p>
+          Enable JavaScript to use the instrument.
+          Source code: <a href="https://github.com/twilighty-abhi/Web-harmonium">GitHub repo</a>.
+        </p>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
