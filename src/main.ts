@@ -1,4 +1,5 @@
 import './styles.css'
+import { inject } from '@vercel/analytics'
 import { resumeAudio } from './audio/context.js'
 import {
   playNote,
@@ -603,3 +604,6 @@ subscribe(() => {
 renderKeys()
 syncControlsFromState()
 void loadSongIndex()
+
+// Initialize Vercel Web Analytics
+inject()
