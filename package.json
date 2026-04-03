@@ -1,7 +1,10 @@
 {
   "name": "web-harmonium",
+  "version": "1.0.0",
+  "description": "Browser-based Indian harmonium with 42 piano-style keys, sample-based audio, and a mentor-style lesson system.",
+  "author": "Abhiram",
+  "license": "MIT",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
