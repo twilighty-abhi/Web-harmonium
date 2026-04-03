@@ -1,0 +1,30 @@
+{
+  "id": "raghupati",
+  "title": "Raghupati Raghav (fragment)",
+  "description": "Simple devotional contour in C — often sung slowly; practice even tone.",
+  "bpm": 66,
+  "difficulty": "easy",
+  "lengthBeats": 12,
+  "events": [
+    { "t": 0, "midi": 60, "duration": 0.5, "sargam": "Sa", "western": "C4" },
+    { "t": 0.5, "midi": 60, "duration": 0.5, "sargam": "Sa", "western": "C4" },
+    { "t": 1, "midi": 60, "duration": 0.5, "sargam": "Sa", "western": "C4" },
+    { "t": 1.5, "midi": 62, "duration": 0.5, "sargam": "Re", "western": "D4" },
+    { "t": 2, "midi": 64, "duration": 1, "sargam": "Ga", "western": "E4" },
+    { "t": 3, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 3.5, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 4, "midi": 62, "duration": 0.5, "sargam": "Re", "western": "D4" },
+    { "t": 4.5, "midi": 60, "duration": 1, "sargam": "Sa", "western": "C4" },
+    { "t": 5.5, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 6, "midi": 67, "duration": 0.5, "sargam": "Pa", "western": "G4" },
+    { "t": 6.5, "midi": 69, "duration": 0.5, "sargam": "Dha", "western": "A4" },
+    { "t": 7, "midi": 67, "duration": 0.5, "sargam": "Pa", "western": "G4" },
+    { "t": 7.5, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 8, "midi": 62, "duration": 0.5, "sargam": "Re", "western": "D4" },
+    { "t": 8.5, "midi": 60, "duration": 1, "sargam": "Sa", "western": "C4" },
+    { "t": 9.5, "midi": 60, "duration": 0.5, "sargam": "Sa", "western": "C4" },
+    { "t": 10, "midi": 62, "duration": 0.5, "sargam": "Re", "western": "D4" },
+    { "t": 10.5, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 11, "midi": 60, "duration": 1, "sargam": "Sa", "western": "C4" }
+  ]
+}
