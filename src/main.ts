@@ -110,68 +110,74 @@ app.innerHTML = `
     <div class="timeline" aria-hidden="true"><div class="timeline-bar" id="timeline-bar"></div></div>
     <p class="next-hint" id="next-hint"></p>
     <p class="feedback" id="feedback" role="status"></p>
-    <div class="ctl-row ctl-row--lesson">
-      <label>
-        <span class="ctl-label-row"><span>BPM</span><span class="ctl-val" id="lbl-lesson-bpm" aria-live="polite"></span></span>
-        <input type="range" id="rng-bpm" min="40" max="140" step="1" />
+    <details class="lesson-group">
+      <summary>Lesson timing & loop</summary>
+      <div class="ctl-row ctl-row--lesson">
+        <label>
+          <span class="ctl-label-row"><span>BPM</span><span class="ctl-val" id="lbl-lesson-bpm" aria-live="polite"></span></span>
+          <input type="range" id="rng-bpm" min="40" max="140" step="1" />
+        </label>
+        <label>
+          <span class="ctl-label-row"><span>Speed</span><span class="ctl-val" id="lbl-lesson-speed" aria-live="polite"></span></span>
+          <input type="range" id="rng-speed" min="0.5" max="1" step="0.05" />
+        </label>
+        <label>
+          <span class="ctl-label-row"><span>Transpose</span><span class="ctl-val" id="lbl-lesson-trans" aria-live="polite"></span></span>
+          <input type="range" id="rng-trans" min="-6" max="6" step="1" />
+        </label>
+        <label>
+          <span class="ctl-label-row"><span>Octave</span><span class="ctl-val" id="lbl-lesson-oct" aria-live="polite"></span></span>
+          <input type="range" id="rng-oct" min="-2" max="2" step="1" />
+        </label>
+        <label>Loop A <input type="number" id="inp-loop-a" min="0" max="64" step="0.5" /></label>
+        <label>Loop B <input type="number" id="inp-loop-b" min="0" max="64" step="0.5" /></label>
+        <label>
+          <span class="ctl-label-row"><span>Count-in (bars)</span><span class="ctl-val" id="lbl-lesson-countin" aria-live="polite"></span></span>
+          <input type="range" id="rng-countin" min="0" max="2" step="1" />
+        </label>
+      </div>
+      <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.35rem;">
+        <input type="checkbox" id="chk-loop" /> Loop A–B
       </label>
-      <label>
-        <span class="ctl-label-row"><span>Speed</span><span class="ctl-val" id="lbl-lesson-speed" aria-live="polite"></span></span>
-        <input type="range" id="rng-speed" min="0.5" max="1" step="0.05" />
+      <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.35rem;">
+        <input type="checkbox" id="chk-metro" /> Metronome
       </label>
-      <label>
-        <span class="ctl-label-row"><span>Transpose</span><span class="ctl-val" id="lbl-lesson-trans" aria-live="polite"></span></span>
-        <input type="range" id="rng-trans" min="-6" max="6" step="1" />
+      <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.35rem;">
+        <input type="checkbox" id="chk-drone" /> Drone (Sa)
       </label>
-      <label>
-        <span class="ctl-label-row"><span>Octave</span><span class="ctl-val" id="lbl-lesson-oct" aria-live="polite"></span></span>
-        <input type="range" id="rng-oct" min="-2" max="2" step="1" />
+      <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.35rem;">
+        <input type="checkbox" id="chk-motion" /> Reduce motion
       </label>
-      <label>Loop A <input type="number" id="inp-loop-a" min="0" max="64" step="0.5" /></label>
-      <label>Loop B <input type="number" id="inp-loop-b" min="0" max="64" step="0.5" /></label>
-      <label>
-        <span class="ctl-label-row"><span>Count-in (bars)</span><span class="ctl-val" id="lbl-lesson-countin" aria-live="polite"></span></span>
-        <input type="range" id="rng-countin" min="0" max="2" step="1" />
-      </label>
-    </div>
-    <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.5rem;">
-      <input type="checkbox" id="chk-loop" /> Loop A–B
-    </label>
-    <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.5rem;">
-      <input type="checkbox" id="chk-metro" /> Metronome
-    </label>
-    <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.5rem;">
-      <input type="checkbox" id="chk-drone" /> Drone (Sa)
-    </label>
-    <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:var(--muted);margin-bottom:0.75rem;">
-      <input type="checkbox" id="chk-motion" /> Reduce motion
-    </label>
-    <div class="presets">
-      <label for="sel-preset" style="font-size:0.78rem;color:var(--muted);">Preset</label>
-      <select id="sel-preset">
-        <option value="practice">Practice</option>
-        <option value="bright">Bright</option>
-        <option value="soft">Soft</option>
-      </select>
-    </div>
-    <div class="ctl-row" style="margin-top:0.75rem;">
-      <label>
-        <span class="ctl-label-row"><span>Reed bass</span><span class="ctl-val" id="lbl-lesson-bass" aria-live="polite"></span></span>
-        <input type="range" id="rng-bass" min="0" max="1" step="0.01" />
-      </label>
-      <label>
-        <span class="ctl-label-row"><span>Reed mid</span><span class="ctl-val" id="lbl-lesson-mid" aria-live="polite"></span></span>
-        <input type="range" id="rng-mid" min="0" max="1" step="0.01" />
-      </label>
-      <label>
-        <span class="ctl-label-row"><span>Reed treble</span><span class="ctl-val" id="lbl-lesson-treble" aria-live="polite"></span></span>
-        <input type="range" id="rng-treble" min="0" max="1" step="0.01" />
-      </label>
-      <label>
-        <span class="ctl-label-row"><span>Drone level</span><span class="ctl-val" id="lbl-lesson-drone-lvl" aria-live="polite"></span></span>
-        <input type="range" id="rng-drone-lvl" min="0" max="1" step="0.01" />
-      </label>
-    </div>
+    </details>
+    <details class="lesson-group">
+      <summary>Sound & reeds</summary>
+      <div class="presets">
+        <label for="sel-preset" style="font-size:0.78rem;color:var(--muted);">Preset</label>
+        <select id="sel-preset">
+          <option value="practice">Practice</option>
+          <option value="bright">Bright</option>
+          <option value="soft">Soft</option>
+        </select>
+      </div>
+      <div class="ctl-row" style="margin-top:0.5rem;">
+        <label>
+          <span class="ctl-label-row"><span>Reed bass</span><span class="ctl-val" id="lbl-lesson-bass" aria-live="polite"></span></span>
+          <input type="range" id="rng-bass" min="0" max="1" step="0.01" />
+        </label>
+        <label>
+          <span class="ctl-label-row"><span>Reed mid</span><span class="ctl-val" id="lbl-lesson-mid" aria-live="polite"></span></span>
+          <input type="range" id="rng-mid" min="0" max="1" step="0.01" />
+        </label>
+        <label>
+          <span class="ctl-label-row"><span>Reed treble</span><span class="ctl-val" id="lbl-lesson-treble" aria-live="polite"></span></span>
+          <input type="range" id="rng-treble" min="0" max="1" step="0.01" />
+        </label>
+        <label>
+          <span class="ctl-label-row"><span>Drone level</span><span class="ctl-val" id="lbl-lesson-drone-lvl" aria-live="polite"></span></span>
+          <input type="range" id="rng-drone-lvl" min="0" max="1" step="0.01" />
+        </label>
+      </div>
+    </details>
   </aside>
 </div>
 <footer class="site-footer">

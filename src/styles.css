@@ -705,6 +705,47 @@ html.reduce-motion .key-cap {
   font: inherit;
 }
 
+.lesson-group {
+  margin-bottom: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(201, 162, 39, 0.25);
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.04), transparent 55%),
+    rgba(0, 0, 0, 0.25);
+  padding: 0.35rem 0.55rem 0.55rem;
+}
+
+.lesson-group > summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--honey-light);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.lesson-group > summary::before {
+  content: '▾';
+  font-size: 0.7rem;
+  opacity: 0.75;
+  transform-origin: center;
+  transition: transform 0.12s ease;
+}
+
+.lesson-group[open] > summary::before {
+  transform: rotate(0deg);
+}
+
+.lesson-group:not([open]) > summary::before {
+  transform: rotate(-90deg);
+}
+
+.lesson-group[open] {
+  padding-bottom: 0.65rem;
+}
+
 .site-footer {
   display: flex;
   align-items: center;
@@ -715,6 +756,10 @@ html.reduce-motion .key-cap {
   color: var(--muted);
   border-top: 1px solid rgba(201, 162, 39, 0.15);
   background: rgba(0, 0, 0, 0.18);
+  margin-top: auto;
+  position: sticky;
+  bottom: 0;
+  z-index: 40;
 }
 
 .site-footer a {
