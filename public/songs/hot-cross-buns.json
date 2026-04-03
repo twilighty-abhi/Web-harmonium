@@ -1,0 +1,30 @@
+{
+  "id": "hot-cross-buns",
+  "title": "Hot Cross Buns",
+  "description": "Three-note pattern on E–D–C then a short phrase — easy hand independence.",
+  "bpm": 96,
+  "difficulty": "easy",
+  "lengthBeats": 8,
+  "events": [
+    { "t": 0, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 0.5, "midi": 62, "duration": 0.5, "sargam": "Re", "western": "D4" },
+    { "t": 1, "midi": 60, "duration": 0.5, "sargam": "Sa", "western": "C4" },
+    { "t": 1.5, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 2, "midi": 62, "duration": 0.5, "sargam": "Re", "western": "D4" },
+    { "t": 2.5, "midi": 60, "duration": 0.5, "sargam": "Sa", "western": "C4" },
+    { "t": 3, "midi": 60, "duration": 0.25, "sargam": "Sa", "western": "C4" },
+    { "t": 3.25, "midi": 60, "duration": 0.25, "sargam": "Sa", "western": "C4" },
+    { "t": 3.5, "midi": 60, "duration": 0.25, "sargam": "Sa", "western": "C4" },
+    { "t": 3.75, "midi": 60, "duration": 0.25, "sargam": "Sa", "western": "C4" },
+    { "t": 4, "midi": 62, "duration": 0.25, "sargam": "Re", "western": "D4" },
+    { "t": 4.25, "midi": 62, "duration": 0.25, "sargam": "Re", "western": "D4" },
+    { "t": 4.5, "midi": 62, "duration": 0.25, "sargam": "Re", "western": "D4" },
+    { "t": 4.75, "midi": 62, "duration": 0.25, "sargam": "Re", "western": "D4" },
+    { "t": 5, "midi": 64, "duration": 0.25, "sargam": "Ga", "western": "E4" },
+    { "t": 5.25, "midi": 62, "duration": 0.25, "sargam": "Re", "western": "D4" },
+    { "t": 5.5, "midi": 60, "duration": 0.5, "sargam": "Sa", "western": "C4" },
+    { "t": 6, "midi": 64, "duration": 0.25, "sargam": "Ga", "western": "E4" },
+    { "t": 6.25, "midi": 62, "duration": 0.25, "sargam": "Re", "western": "D4" },
+    { "t": 6.5, "midi": 60, "duration": 1.5, "sargam": "Sa", "western": "C4" }
+  ]
+}
