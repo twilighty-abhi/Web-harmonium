@@ -1,0 +1,31 @@
+{
+  "id": "jvke-her",
+  "title": "Her — JVKE (opening phrase)",
+  "description": "Simplified ballad-style phrase in C — practice smooth steps and small leaps.",
+  "bpm": 82,
+  "difficulty": "medium",
+  "lengthBeats": 14,
+  "events": [
+    { "t": 0, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 0.5, "midi": 62, "duration": 0.5, "sargam": "Re", "western": "D4" },
+    { "t": 1, "midi": 60, "duration": 0.5, "sargam": "Sa", "western": "C4" },
+    { "t": 1.5, "midi": 62, "duration": 0.5, "sargam": "Re", "western": "D4" },
+    { "t": 2, "midi": 64, "duration": 0.75, "sargam": "Ga", "western": "E4" },
+    { "t": 2.75, "midi": 67, "duration": 0.75, "sargam": "Pa", "western": "G4" },
+    { "t": 3.5, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 4, "midi": 62, "duration": 0.5, "sargam": "Re", "western": "D4" },
+    { "t": 4.5, "midi": 60, "duration": 1, "sargam": "Sa", "western": "C4" },
+    { "t": 5.5, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 6, "midi": 67, "duration": 0.5, "sargam": "Pa", "western": "G4" },
+    { "t": 6.5, "midi": 69, "duration": 0.5, "sargam": "Dha", "western": "A4" },
+    { "t": 7, "midi": 67, "duration": 0.5, "sargam": "Pa", "western": "G4" },
+    { "t": 7.5, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 8, "midi": 62, "duration": 0.5, "sargam": "Re", "western": "D4" },
+    { "t": 8.5, "midi": 60, "duration": 1.5, "sargam": "Sa", "western": "C4" },
+    { "t": 10, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 10.5, "midi": 67, "duration": 0.5, "sargam": "Pa", "western": "G4" },
+    { "t": 11, "midi": 72, "duration": 1, "sargam": "Sa", "western": "C5" },
+    { "t": 12, "midi": 69, "duration": 0.5, "sargam": "Dha", "western": "A4" },
+    { "t": 12.5, "midi": 67, "duration": 1, "sargam": "Pa", "western": "G4" }
+  ]
+}
