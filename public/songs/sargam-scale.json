@@ -1,0 +1,25 @@
+{
+  "id": "sargam-scale",
+  "title": "Sa Re Ga Ma — scale",
+  "description": "Walk up and down the Bilaval scale. Match the highlighted keys; labels show Sa / C together.",
+  "bpm": 60,
+  "difficulty": "easy",
+  "lengthBeats": 9,
+  "events": [
+    { "t": 0, "midi": 60, "duration": 0.5, "sargam": "Sa", "western": "C4" },
+    { "t": 0.5, "midi": 62, "duration": 0.5, "sargam": "Re", "western": "D4" },
+    { "t": 1, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 1.5, "midi": 65, "duration": 0.5, "sargam": "Ma", "western": "F4" },
+    { "t": 2, "midi": 67, "duration": 0.5, "sargam": "Pa", "western": "G4" },
+    { "t": 2.5, "midi": 69, "duration": 0.5, "sargam": "Dha", "western": "A4" },
+    { "t": 3, "midi": 71, "duration": 0.5, "sargam": "Ni", "western": "B4" },
+    { "t": 3.5, "midi": 72, "duration": 0.5, "sargam": "Sa", "western": "C5" },
+    { "t": 4, "midi": 71, "duration": 0.5, "sargam": "Ni", "western": "B4" },
+    { "t": 4.5, "midi": 69, "duration": 0.5, "sargam": "Dha", "western": "A4" },
+    { "t": 5, "midi": 67, "duration": 0.5, "sargam": "Pa", "western": "G4" },
+    { "t": 5.5, "midi": 65, "duration": 0.5, "sargam": "Ma", "western": "F4" },
+    { "t": 6, "midi": 64, "duration": 0.5, "sargam": "Ga", "western": "E4" },
+    { "t": 6.5, "midi": 62, "duration": 0.5, "sargam": "Re", "western": "D4" },
+    { "t": 7, "midi": 60, "duration": 1, "sargam": "Sa", "western": "C4" }
+  ]
+}
